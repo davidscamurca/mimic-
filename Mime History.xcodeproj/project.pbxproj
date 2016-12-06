@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B62D5B3773B9E8EA4DF053E /* Pods_Mime_History_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F18D3487BAD62F3C906A297 /* Pods_Mime_History_WatchKit_Extension.framework */; };
 		6AC846FA89BBD5AB01A46809 /* Pods_Mime_History.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED93B3A26B0DE7268398E0C /* Pods_Mime_History.framework */; };
+		A023D7711DF5DB84006CF9B4 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A023D7701DF5DB84006CF9B4 /* TutorialViewController.swift */; };
 		A08AFCEA1DF10C02000D7849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08AFCE91DF10C02000D7849 /* AppDelegate.swift */; };
 		A08AFCF41DF10C02000D7849 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08AFCF21DF10C02000D7849 /* LaunchScreen.storyboard */; };
 		A08AFCF91DF10C03000D7849 /* Mime History WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A08AFCF81DF10C03000D7849 /* Mime History WatchKit App.app */; };
@@ -89,6 +90,7 @@
 		234BA28F731EBBC5B7A82BED /* Pods-Mime History WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mime History WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mime History WatchKit App/Pods-Mime History WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		3BCF88F5CEE4A7DB26BDF6DB /* Pods-Mime History WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mime History WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mime History WatchKit Extension/Pods-Mime History WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		3F18D3487BAD62F3C906A297 /* Pods_Mime_History_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mime_History_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A023D7701DF5DB84006CF9B4 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		A08AFCE61DF10C02000D7849 /* Mime History.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mime History.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08AFCE91DF10C02000D7849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A08AFCF31DF10C02000D7849 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				A08AFD331DF10E51000D7849 /* StartViewController.swift */,
 				A08AFD341DF10E51000D7849 /* JogoViewController.swift */,
 				A08AFD351DF10E51000D7849 /* PlacarViewController.swift */,
+				A023D7701DF5DB84006CF9B4 /* TutorialViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -368,17 +371,17 @@
 				TargetAttributes = {
 					A08AFCE51DF10C02000D7849 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 7Y3AR7539Z;
+						DevelopmentTeam = 2577FS5BXM;
 						ProvisioningStyle = Automatic;
 					};
 					A08AFCF71DF10C03000D7849 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 7Y3AR7539Z;
+						DevelopmentTeam = 2577FS5BXM;
 						ProvisioningStyle = Automatic;
 					};
 					A08AFD061DF10C03000D7849 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 7Y3AR7539Z;
+						DevelopmentTeam = 2577FS5BXM;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -572,6 +575,7 @@
 				A08AFD3C1DF10E51000D7849 /* PlacarViewController.swift in Sources */,
 				A0955FAC1DF209B70092D3BA /* PeriodoStore.swift in Sources */,
 				A08AFD371DF10E51000D7849 /* LojaViewController.swift in Sources */,
+				A023D7711DF5DB84006CF9B4 /* TutorialViewController.swift in Sources */,
 				A08AFD491DF10E78000D7849 /* Grupo.swift in Sources */,
 				A0955FAA1DF2099F0092D3BA /* Periodo.swift in Sources */,
 				A08AFD4A1DF10E78000D7849 /* GrupoStore.swift in Sources */,
@@ -724,7 +728,7 @@
 			baseConfigurationReference = C1C15859D87C03610C2DC1F3 /* Pods-Mime History WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = 7Y3AR7539Z;
+				DEVELOPMENT_TEAM = 2577FS5BXM;
 				INFOPLIST_FILE = "Mime History WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andersonoliveira.Mime-History.watchkitapp.watchkitextension";
@@ -742,7 +746,7 @@
 			baseConfigurationReference = 3BCF88F5CEE4A7DB26BDF6DB /* Pods-Mime History WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = 7Y3AR7539Z;
+				DEVELOPMENT_TEAM = 2577FS5BXM;
 				INFOPLIST_FILE = "Mime History WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andersonoliveira.Mime-History.watchkitapp.watchkitextension";
@@ -761,7 +765,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7Y3AR7539Z;
+				DEVELOPMENT_TEAM = 2577FS5BXM;
 				IBSC_MODULE = Mime_History_WatchKit_Extension;
 				INFOPLIST_FILE = "Mime History WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andersonoliveira.Mime-History.watchkitapp";
@@ -780,7 +784,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7Y3AR7539Z;
+				DEVELOPMENT_TEAM = 2577FS5BXM;
 				IBSC_MODULE = Mime_History_WatchKit_Extension;
 				INFOPLIST_FILE = "Mime History WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andersonoliveira.Mime-History.watchkitapp";
@@ -798,7 +802,7 @@
 			baseConfigurationReference = CD47DBF6B8C4DEE786C24585 /* Pods-Mime History.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7Y3AR7539Z;
+				DEVELOPMENT_TEAM = 2577FS5BXM;
 				INFOPLIST_FILE = "Mime History/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andersonoliveira.Mime-History";
@@ -812,7 +816,7 @@
 			baseConfigurationReference = 0F61913A14310BEADD698E4F /* Pods-Mime History.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 7Y3AR7539Z;
+				DEVELOPMENT_TEAM = 2577FS5BXM;
 				INFOPLIST_FILE = "Mime History/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.andersonoliveira.Mime-History";

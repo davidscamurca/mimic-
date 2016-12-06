@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Old-tg-AqE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RPE-Y0-e0B">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -38,6 +38,178 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="SJo-Y0-oaX">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="min" doubleSided="YES" id="RPE-Y0-e0B" customClass="TutorialViewController" customModule="Mime_History" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pvm-EF-e3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2266" y="672"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zlA-Bn-sfb">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" id="HGT-dZ-znB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cgn-vQ-a9Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="lVM-dK-No2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NoS-EE-oJG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuto02" translatesAutoresizingMaskIntoConstraints="NO" id="svR-sg-ycq">
+                                <rect key="frame" x="29" y="84" width="316" height="499"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4g-Up-HLE">
+                                <rect key="frame" x="313" y="629" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Pular">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Old-tg-AqE" kind="presentation" modalTransitionStyle="crossDissolve" id="2vu-nX-MV4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta" translatesAutoresizingMaskIntoConstraints="NO" id="qNK-OF-A3x">
+                                <rect key="frame" x="157" y="621" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta invertida" translatesAutoresizingMaskIntoConstraints="NO" id="ofb-4n-sQr">
+                                <rect key="frame" x="157" y="8" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqu-dk-Zzd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="672"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="KbX-zk-4As">
+            <objects>
+                <viewController storyboardIdentifier="firstVC" id="ybK-TU-WQr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NFp-2n-bav"/>
+                        <viewControllerLayoutGuide type="bottom" id="gCc-Q9-li3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BFz-ol-a2L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuto01" translatesAutoresizingMaskIntoConstraints="NO" id="WYt-xT-nsq">
+                                <rect key="frame" x="30" y="205" width="314" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfb-jD-koZ">
+                                <rect key="frame" x="313" y="629" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Pular">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Old-tg-AqE" kind="presentation" modalTransitionStyle="crossDissolve" id="iIC-Nm-30n"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta" translatesAutoresizingMaskIntoConstraints="NO" id="3bQ-sN-OMv">
+                                <rect key="frame" x="157" y="621" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5T9-jk-D63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1620" y="672"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MGL-CS-WIN">
+            <objects>
+                <viewController storyboardIdentifier="thirdVC" id="NXb-3y-hxG" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kgl-LC-wRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jk4-Z3-VWf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CMA-d8-4sQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuto03" translatesAutoresizingMaskIntoConstraints="NO" id="jMM-8K-4JP">
+                                <rect key="frame" x="29" y="84" width="317" height="499"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZM-z9-QML">
+                                <rect key="frame" x="313" y="629" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Pular">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Old-tg-AqE" kind="presentation" modalTransitionStyle="crossDissolve" id="IPu-W6-V2f"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta" translatesAutoresizingMaskIntoConstraints="NO" id="WcM-cZ-slo">
+                                <rect key="frame" x="157" y="621" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta invertida" translatesAutoresizingMaskIntoConstraints="NO" id="dPy-fY-NpT">
+                                <rect key="frame" x="157" y="8" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfM-wa-nw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1620" y="1329"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dKS-CK-WO5">
+            <objects>
+                <viewController storyboardIdentifier="fourthVC" id="OBR-EY-XLR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I7I-Ud-XRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="YHn-7r-JUc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="12f-kO-XuC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RY1-ZG-gWX">
+                                <rect key="frame" x="290" y="615" width="69" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="20"/>
+                                <state key="normal" title="Começar">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Old-tg-AqE" kind="presentation" modalTransitionStyle="crossDissolve" id="Ddu-7m-DwN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuto04" translatesAutoresizingMaskIntoConstraints="NO" id="suw-AT-jsI">
+                                <rect key="frame" x="29" y="84" width="317" height="499"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seta invertida" translatesAutoresizingMaskIntoConstraints="NO" id="Y2S-tv-2j9">
+                                <rect key="frame" x="157" y="8" width="60" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSS-KL-Cic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="1328"/>
         </scene>
         <!--Infos View Controller-->
         <scene sceneID="UFF-k7-Ske">
@@ -92,7 +264,7 @@
                                         </constraints>
                                         <state key="normal" title="Iniciar" image="start"/>
                                         <connections>
-                                            <segue destination="cVm-oT-Y7K" kind="show" id="aAa-Ls-ap3"/>
+                                            <segue destination="cVm-oT-Y7K" kind="show" identifier="jogo" id="aAa-Ls-ap3"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="jOJ-ug-RvZ">
@@ -101,6 +273,14 @@
                                             <constraint firstAttribute="height" constant="53" id="rvz-Le-zli"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjA-Xb-KD8">
+                                        <rect key="frame" x="324" y="19" width="35" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="tutorial"/>
+                                        <connections>
+                                            <segue destination="RPE-Y0-e0B" kind="presentation" id="7ep-l3-3HF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -467,6 +647,16 @@
         <image name="cardBranco" width="376" height="548"/>
         <image name="romaAntiga" width="55" height="55"/>
         <image name="sair" width="48" height="36"/>
+        <image name="seta" width="64" height="64"/>
+        <image name="seta invertida" width="64" height="64"/>
         <image name="start" width="123" height="65"/>
+        <image name="tuto01" width="314" height="256"/>
+        <image name="tuto02" width="316" height="498"/>
+        <image name="tuto03" width="316" height="498"/>
+        <image name="tuto04" width="316" height="498"/>
+        <image name="tutorial" width="26" height="22"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ddu-7m-DwN"/>
+    </inferredMetricsTieBreakers>
 </document>

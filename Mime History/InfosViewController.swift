@@ -107,12 +107,14 @@ class InfosViewController: UIViewController, UICollectionViewDataSource, UIColle
     //MARK: Segue que manda a quantidade de tempo para responder uma Mímica
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let JogoView = segue.destination as! JogoViewController
-        JogoView.timeBase = roundUp(number: sliderTempo.currentValue!)
-        
-        //MARK: Segue que manda a quantidade de equipe
-        let quantidadeEquipe = segue.destination as! JogoViewController
-        quantidadeEquipe.quantidadeDeTimes = roundUp(number:sliderEquipes.currentValue!)
+        if segue.identifier == "jogo" {
+            let JogoView = segue.destination as! JogoViewController
+            JogoView.timeBase = roundUp(number: sliderTempo.currentValue!)
+            
+            //MARK: Segue que manda a quantidade de equipe
+            let quantidadeEquipe = segue.destination as! JogoViewController
+            quantidadeEquipe.quantidadeDeTimes = roundUp(number:sliderEquipes.currentValue!)
+        }
     }
     
     func roundUp(number: Float) -> Int {
