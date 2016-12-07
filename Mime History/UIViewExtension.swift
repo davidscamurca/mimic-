@@ -42,7 +42,7 @@ extension UIView {
 
         animation.type = kCATransitionFade
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionDefault)
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = kCAFillModeBackwards
         animation.duration = duration
 
         layer.add(animation, forKey: "kCATransitionFade")

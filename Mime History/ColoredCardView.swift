@@ -16,7 +16,6 @@ class ColoredCardView: CardView {
         }
     }
     
-    
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var acertouBt: UIButton!
     @IBOutlet weak var image: UIImageView!

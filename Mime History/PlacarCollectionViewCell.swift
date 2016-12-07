@@ -13,4 +13,7 @@ class PlacarCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imagem: UIImageView!
     @IBOutlet weak var pontos: UILabel!
     @IBOutlet weak var nome: UILabel!
+    @IBOutlet weak var balao: UIImageView!
+    @IBOutlet weak var frase: UILabel!
+    
 }

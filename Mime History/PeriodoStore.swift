@@ -15,7 +15,7 @@ class PeriodoStore: NSObject {
     let dataPeriodos: [(String, Int, UIImage, UIImage)] = [
         
         //   Nome        Pontos     id          imagem
-        ("Grécia Antiga",   0,      #imageLiteral(resourceName: "greciaAntigaPt"),    #imageLiteral(resourceName: "greciaAntigaPt")),
+        ("Grécia Antiga",   0,      #imageLiteral(resourceName: "espartanos"),    #imageLiteral(resourceName: "greciaAntigaPt")),
         
         ("Egito Antigo",     0,         #imageLiteral(resourceName: "egitoAntigo"),    #imageLiteral(resourceName: "egitoAntigoPt")),
         

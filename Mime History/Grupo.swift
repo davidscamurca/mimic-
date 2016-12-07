@@ -14,6 +14,9 @@ class Grupo: NSObject {
     var nome: String?
     var pontos: Int?
     var id: Int?
+    var frase: String?
+    var widgth: CGFloat? = 100
+    
     
     //Add Pontos
     func addPontos (){

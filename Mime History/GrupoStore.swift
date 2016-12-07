@@ -13,27 +13,16 @@ class GrupoStore {
     static let singleton = GrupoStore()
     
     
-    let datagrupos: [(String, Int, Int, UIImage)] = [
+    let datagrupos: [(String, Int, Int, UIImage, String)] = [
         
-       //   Nome        Pontos     id          imagem
-        ("Legionários",   0,      0,    #imageLiteral(resourceName: "romaAntiga")),
+       //   Nome        Pontos     id          imagem           Frases
+        ("Legionários",   0,      0,    #imageLiteral(resourceName: "romaAntiga"),      "Por Roma!"),
         
-        ("Beserkers",     0,      1,    #imageLiteral(resourceName: "beserkers")),
+        ("Beserkers",     0,      1,    #imageLiteral(resourceName: "beserkers"),       "Biiirl!!"),
         
-        ("Espartanos",    0,      2,    #imageLiteral(resourceName: "espartanos")),
+        ("Espartanos",    0,      2,    #imageLiteral(resourceName: "espartanos"),      "Nós somos Esparta!!!"),
         
-        ("Cruzados",      0,      3,    #imageLiteral(resourceName: "cruzados"))
-    ]
-    
-    let dataPeriodos: [(String, Int, Int, UIImage)] = [
-        
-        //   Nome        Pontos     id          imagem
-        ("Grécia Antiga",   0,      0,    #imageLiteral(resourceName: "greciaAntigaPt")),
-        
-        ("Egito Antigo",     0,      1,    #imageLiteral(resourceName: "egitoAntigoPt")),
-        
-        ("Roma Antiga",    0,      2,    #imageLiteral(resourceName: "romaAntigaPt")),
-        
+        ("Cruzados",      0,      3,    #imageLiteral(resourceName: "cruzados"),        "Viva os Templários!")
     ]
     
     //MARK: Pega grupos
@@ -49,30 +38,10 @@ class GrupoStore {
             grupo.pontos = datagrupos[i].1
             grupo.id = datagrupos[i].2
             grupo.avatar = datagrupos[i].3
+            grupo.frase = datagrupos[i].4
         
             grupos.append(grupo)
         }
         return grupos
     }
-    
-    //MARK: Pega grupos
-    func pegarGrupo()-> [Grupo] {
-        
-        var grupos = [Grupo]()
-        
-        for dataPeriodo in self.dataPeriodos {
-            
-            let grupo = Grupo()
-            
-            grupo.nome = dataPeriodo.0
-            grupo.pontos = dataPeriodo.1
-            grupo.id = dataPeriodo.2
-            grupo.avatar = dataPeriodo.3
-            
-            grupos.append(grupo)
-        }
-        return grupos
-    }
-
-    
 }

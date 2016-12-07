@@ -26,16 +26,6 @@ class InfosViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         sliderEquipeSettings()
         sliderTempoSettings()
-        
-        sliderEquipes.frame = CGRect(x: 50, y: 270, width: self.view.frame.size.width - 80, height: 100)
-        sliderEquipes.minValue = 2
-        sliderEquipes.maxValue = 4
-        sliderEquipes.currentValue = 2
-        sliderEquipes.step = 1
-        sliderEquipes.ignoreDecimals = true  // default value
-        sliderEquipes.animateLabel = false   // default value
-        self.view.addSubview(sliderEquipes)
-        
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -45,12 +35,19 @@ class InfosViewController: UIViewController, UICollectionViewDataSource, UIColle
     //Slider das Equipes
     func sliderEquipeSettings (){
         
-        
-        
+        sliderEquipes.frame = CGRect(x: 50, y: 270, width: self.view.frame.size.width - 80, height: 100)
+        sliderEquipes.minValue = 2
+        sliderEquipes.maxValue = 4
+        sliderEquipes.currentValue = 2
+        sliderEquipes.step = 1
+        sliderEquipes.ignoreDecimals = true  // default value
+        sliderEquipes.animateLabel = false   // default value
+        self.view.addSubview(sliderEquipes)
     }
     
     //Slider Tempo
     func sliderTempoSettings(){
+        
         sliderTempo.frame = CGRect(x: 50, y: 390, width: self.view.frame.size.width - 80, height: 100)
         sliderTempo.minValue = 1
         sliderTempo.maxValue = 3
@@ -109,6 +106,7 @@ class InfosViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         if segue.identifier == "jogo" {
             let JogoView = segue.destination as! JogoViewController
+            print(roundUp(number: sliderTempo.currentValue!))
             JogoView.timeBase = roundUp(number: sliderTempo.currentValue!)
             
             //MARK: Segue que manda a quantidade de equipe

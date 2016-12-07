@@ -27,15 +27,6 @@ class CardStore {
     )] =
     
         [
-            
-            ( 001,
-              "Rômulo & Rêmulo",
-              "",
-              "Na mitologia romana, os gêmeos foram jogados no rio Tibre, resgatados por uma loba, que os amamentou e posteriormente criados por um casal de pastores. Adultos, fundam a cidade Roma",
-              "A Origem de Roma",
-              #imageLiteral(resourceName: "romulo"),
-              0
-            ),
             ( 002,
               "Centurião",
               "",
@@ -51,30 +42,6 @@ class CardStore {
               "Pagamento com Sal",
               #imageLiteral(resourceName: "salario"),
               0
-            ),
-            ( 004,
-              "Tartaruga",
-              "",
-              "Uma formação de combate defensivo contra arquearia, permitindo avançar sob linhas inimigas sem abalo do ataque à distância. ",
-              "Tática de Combate",
-              #imageLiteral(resourceName: "tartaruga"),
-              0
-            ),
-            (005,
-             "Vênus",
-             "",
-             "Deusa do Amor e da Beleza. Os romanos se consideravam descendentes da deusa, por conta de seu filho Éneas, fundador mítico da raça romana e pai de Rômulo e Rêmulo.",
-             "Deusa do Amor e Beleza",
-             #imageLiteral(resourceName: "venus"),
-             0
-            ),
-            (006,
-             "Vinho",
-             "",
-             "Bebida alcoólica sempre esteve presente na cultura romana, acessível a todos. Era usado como forma de impor a cultura romana nas regiões conquistadas, que passavam a produzi-lo.",
-             "Bebida Alcoólica de Uva",
-             #imageLiteral(resourceName: "vinho"),
-             0
             ),
             (007,
              "Senador",
@@ -92,6 +59,30 @@ class CardStore {
              #imageLiteral(resourceName: "netuno"),
              0
             ),
+            (010,
+             "Gladiador",
+             "",
+             "Os gladiadores eram lutadores de torneios no Coliseu. Eram escravos, treinados para combate. Por décadas, os Gladiadores lutaram entre si ou contra animais ferozes para entreter os romanos",
+             "Guerreiro Escravo",
+             #imageLiteral(resourceName: "gladiador"),
+             0
+            ),
+            ( 004,
+                "Tartaruga",
+                "",
+                "Uma formação de combate defensivo contra arquearia, permitindo avançar sob linhas inimigas sem abalo do ataque à distância. ",
+                "Tática de Combate",
+                #imageLiteral(resourceName: "tartaruga"),
+                0
+            ),
+            ( 001,
+              "Rômulo & Rêmulo",
+              "",
+              "Na mitologia romana, os gêmeos foram jogados no rio Tibre, resgatados por uma loba, que os amamentou e posteriormente criados por um casal de pastores. Adultos, fundam a cidade Roma",
+              "A Origem de Roma",
+              #imageLiteral(resourceName: "romulo"),
+              0
+            ),
             (009,
              "Júlio César",
              "",
@@ -100,14 +91,22 @@ class CardStore {
              #imageLiteral(resourceName: "julioCezar"),
              0
             ),
-            (010,
-             "Gladiador",
+            (005,
+             "Vênus",
              "",
-             "Os gladiadores eram lutadores de torneios no Coliseu. Eram escravos, treinados para combate. Por décadas, os Gladiadores lutaram entre si ou contra animais ferozes para entreter os romanos",
-             "Guerreiro Escravo",
-             #imageLiteral(resourceName: "gladiador"),
+             "Deusa do Amor e da Beleza. Os romanos se consideravam descendentes da deusa, por conta de seu filho Éneas, fundador mítico da raça romana e pai de Rômulo e Rêmulo.",
+             "Deusa do Amor e Beleza",
+             #imageLiteral(resourceName: "venus"),
              0
-            )
+            ),
+            (006,
+             "Vinho",
+             "",
+             "Bebida alcoólica sempre esteve presente na cultura romana, acessível a todos. Era usado como forma de impor a cultura romana nas regiões conquistadas, que passavam a produzi-lo.",
+             "Bebida Alcoólica de Uva",
+             #imageLiteral(resourceName: "vinho"),
+             0
+            ),
         ]
 
     

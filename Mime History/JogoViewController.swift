@@ -21,7 +21,7 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
-    
+    @IBOutlet var popoverSair: UIView!
     @IBOutlet weak var imagemTurnoAtual: UIImageView!
     @IBOutlet weak var voltar: UIButton!
     @IBOutlet weak var walletHeaderView: UIView!
@@ -29,8 +29,10 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var viewPlacar: UIView!
     @IBOutlet weak var placarCV: UICollectionView!
     
+    var viewTransparente = UIView()
     var grupos: [Grupo]? = []
     var timeAtual = 0
+    var clickCV = true
     
     
     var hour = 0
@@ -45,7 +47,8 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
     var Cronometro = 0
     
     var timeBase: Int?
-    
+    var coloredCardViews = [ColoredCardView]()
+
     
     //MARK: - Variáveis auxiliares das segues vinda da tela de Infos
     
@@ -61,16 +64,12 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         self.grupos = GrupoStore.singleton.pegarGrupo(self.quantidadeDeTimes!-1)
         
-        
         self.viewPlacar.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         self.viewPlacar.layer.shadowOpacity = 0.5
         self.cards = CardStore.singleton.getDeck()
         
         walletView.walletHeader = walletHeaderView
         walletView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
-        
-        
-        var coloredCardViews = [ColoredCardView]()
         
         self.cards?.forEach({ (card) in
             
@@ -84,13 +83,11 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
                 cardView.descricao.text = card.Descricao
                 cardView.subtitulo.text = card.Era
                 
-                
                 coloredCardViews.append(cardView)
             }
         })
         
         walletView.reload(cardViews: coloredCardViews)
-        
         
         NotificationCenter.default.addObserver(self, selector: #selector(JogoViewController.showPlacar(_:)), name: NSNotification.Name(rawValue: "showPlacar"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(JogoViewController.dismissPlacar(_:)), name: NSNotification.Name(rawValue: "dismissPlacar"), object: nil)
@@ -137,10 +134,20 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     @IBAction func dismiss(_ sender: Any) {
+        
+        self.animateInPopover(popover: self.popoverSair)
+    }
+    
+    @IBAction func fecharPopover(_ sender: UIButton) {
+        
+        self.animateOutPopover(popover: self.popoverSair)
+    }
+    
+    @IBAction func voltar(_ sender: UIButton) {
+        
         self.dismiss(animated: true, completion: nil)
     }
-   
-  
+    
     //MARK: Collection Data Source
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -160,10 +167,29 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.imagem.image = grupo.avatar
         cell.pontos.text = String(describing: grupo.pontos!)
         cell.nome.text = grupo.nome
+        cell.frase.text = grupo.frase
         
         return cell
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! PlacarCollectionViewCell
+        
+        collectionView.collectionViewLayout.invalidateLayout()
+        if clickCV {
+            
+            self.grupos?[indexPath.item].widgth = 162
+            cell.balao.isHidden = !self.clickCV
+            cell.frase.isHidden = !self.clickCV
+        }else {
+            
+            self.grupos?[indexPath.item].widgth = 100
+            cell.balao.isHidden = !self.clickCV
+            cell.frase.isHidden = !self.clickCV
+        }
+        self.clickCV = self.trocaBool(self.clickCV)
+    }
     
     func pontua() {
         
@@ -200,6 +226,53 @@ class JogoViewController: UIViewController, UICollectionViewDataSource, UICollec
         }, errorHandler: { (Error) in
             print("Não consegui enviar o time")
         })
+    }
+    
+    func animateInPopover(popover: UIView) {
+        
+        self.addViewTransparente()
+        self.view.addSubview(popover)
+        popover.center = self.view.center
+        
+        popover.transform = CGAffineTransform.identity.scaledBy(x: 1.5, y: 1.5)
+        popover.alpha = 0
+        
+        UIView.animate(withDuration: 0.4, animations: {
+            popover.alpha = 1
+            popover.transform = CGAffineTransform.identity
+        })
+        
+    }
+    
+    func animateOutPopover(popover: UIView) {
+        self.viewTransparente.removeFromSuperview()
+        UIView.animate(withDuration: 0.3, animations: {
+            popover.transform = CGAffineTransform.identity.scaledBy(x: 1.5, y: 1.5)
+            popover.alpha = 0
+            
+        }, completion: { (success:Bool) in
+            popover.removeFromSuperview()
+        })
+    }
+    
+    func addViewTransparente(){
+        self.viewTransparente.frame = self.view.frame
+        self.viewTransparente.backgroundColor = UIColor.white
+        self.viewTransparente.alpha = 0.5
+        self.view.addSubview(viewTransparente)
+    }
+    
+    func trocaBool(_ value: Bool) -> Bool {
+        
+        return !value
+    }
+}
+
+extension JogoViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let item = self.grupos?[indexPath.item]
+        return CGSize(width: (item?.widgth)!, height: 120)
     }
     
 }
